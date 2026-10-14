@@ -3,10 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mein Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <title>Mein Portfolio</title>
 </head>
 <body>
-    
+
+    <!-- Hero / Header Bereich -->
+    <header class="hero">
+        <h2>Willkommen zu meinem Portfolio</h2>
+    </header>
+
+    <!-- Über mich Bereich -->
+    <section class="about">
+        <div class="about-container">
+            <!-- <img src="bilder/profil.jpg" alt="Portraitfoto von Fnan"> -->
+            <div class="about-text">
+                <h3>Über mich</h3>
+                <p class="highlight-text">
+                    Hi, ich bin Fnan und ich bin Student an der Hochschule Karlsruhe. 
+                    Mich begeistert es, kreative und funktionale Websites zu erstellen!
+                </p>
+                <ul>
+                    <li><strong>Wohnort:</strong> Karlsruhe</li>
+                    <li><strong>Interessen:</strong> Webentwicklung, Design</li>
+                    <li><strong>Sprachen:</strong> Deutsch, Englisch, Tigrinya</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+   <!-- Projekte Bereich -->
+    <section class="projects">
+        <h2 class="section-title">Meine Projekte</h2>
+
+        <<!-- Projekt 1: Geotagging App (Linksbündig) -->
+        <article class="project-card align-left">
+            <div class="project-info">
+                <h3>Geotagging App</h3>
+                <p>
+                    Eine Social-Sharing-App für interessante Orte. Die Anwendung ermöglicht es Nutzern, 
+                    Standorte zu markieren, Fotos hochzuladen und mit der Community zu teilen.
+                </p>
+
+                <!-- Tech-Tags -->
+                <div class="tech-tags">
+                    <span>HTML/CSS</span>
+                    <span>JavaScript</span>
+                    <span>REST API</span>
+                </div>
+
+                <!-- Projekt-Links -->
+                <div class="project-links">
+                    <a href="https://github.com/fnankahsay/geotag-app" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Code ansehen</a>
+                </div>
+            </div>
+
+            <!-- Bild außerhalb von project-info platzieren -->
+            <div class="project-media">
+                <img src="bilder/GeoTagApp.png" alt="Screenshot der Geotagging App">
+            </div>
+        </article>
+
+        <!-- Projekt 2: Zoetrop 3D (Rechtsbündig) -->
+        <article class="project-card align-right reverse">
+            <div class="project-media">
+                <video autoplay loop muted playsinline>
+                    <source src="videos/MINB2424_ZoetropGesamtabgabe_Kahsay.FnanHenok_Video.mp4" type="video/mp4">
+                    Dein Browser unterstützt dieses Video-Format leider nicht.
+                </video>
+            </div>
+            <div class="project-info">
+                <h3>Zoetrop 3D Animation</h3>
+                <p>
+                    Ein in Maya 3D nachgebautes Zoetrop. Das Projekt beleuchtet die Grundlagen der 
+                    Animation und optischen Täuschungen im dreidimensionalen Raum.
+                </p>
+
+                <!-- Tech-Tags -->
+                <div class="tech-tags">
+                    <span>Autodesk Maya</span>
+                    <span>3D Modeling</span>
+                    <span>Animation</span>
+                </div>
+
+                <!-- Projekt-Links -->
+                <div class="project-links">
+                    <a href="#" class="btn btn-primary">Details ansehen</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- Projekt 3: Holographisches Interface (Zentral platziert) -->
+        <article class="project-card align-center">
+            <div class="project-info">
+                <h3>Holographisches Interface</h3>
+                <p>
+                    Ein futuristisches UI/UX-Konzept für ein holographisches Display. Fokus lag auf 
+                    intuitiver Gestensteuerung, räumlicher Tiefe und minimalistischer Informationsarchitektur.
+                </p>
+
+                <!-- Tech-Tags -->
+                <div class="tech-tags">
+                    <span>UI/UX Design</span>
+                    <span>Figma / Maya</span>
+                    <span>Frontend Prototype</span>
+                </div>
+
+                <!-- Projekt-Links -->
+                <div class="project-links">
+                    <a href="#" class="btn btn-primary">Projekt ansehen</a>
+                </div>
+            </div>
+            <div class="project-media">
+                <img src="bilder/hologramm.png" alt="Holographisches Interface Konzept">
+            </div>
+        </article>
+    </section>
+    <!-- Footer / Kontaktbereich -->
+    <footer class="footer">
+        <div class="footer-content">
+            <h2>Lass uns zusammenarbeiten!</h2>
+            <p>Ich bin aktuell auf der Suche nach einem Praktikum im Bereich Web-Entwicklung.</p>
+            
+            <a href="mailto:fnan.kahsay@outlook.de" class="contact-button">E-Mail schreiben</a>
+
+            <div class="social-links">
+                <a href="https://github.com/fnankahsay" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://linkedin.com/in/fnan-kahsay-5928623b5" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Fnan. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

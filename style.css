@@ -1,3 +1,295 @@
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Grundlegendes Reset & Styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    background-color: lightblue;
+    background-color: rgb(108, 218, 255);
+    font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #1d1d1f;
+}
+
+/* Hero Container - Mittig platziert mit dezenter Hintergrundfarbe */
+.hero {
+    background-color: rgba(255, 255, 255, 0.2); /* Sanfter Kontrast zum Hintergrund */
+    padding: 2.5rem 1rem;
+    display: flex;
+    justify-content: center; /* Horizontale Zentrierung */
+    align-items: center;     /* Vertikale Zentrierung */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.hero h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Über mich Bereich - Zentriert im Body ohne Hintergrund */
+.about {
+    padding: 4rem 1rem;
+    display: flex;
+    justify-content: center; /* Zentriert die Sektion im Body */
+}
+
+.about-container {
+    max-width: 600px;
+    width: 100%;
+}
+
+.about-text {
+    text-align: center; /* Horizontale Ausrichtung aller Elemente */
+}
+
+.about-text h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Fettgedruckter Einführungstext */
+.highlight-text {
+    font-weight: 700;
+    font-size: 1.15rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.about-text ul {
+    list-style: none; /* Entfernt Aufzählungspunkte für cleanen Look */
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.about-text li {
+    font-size: 1rem;
+}
+/* Container für die Projekte */
+.projects {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+}
+
+.section-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Basis-Styling für die Projektkarten */
+.project-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 2.5rem;
+    border-radius: 12px;
+    width: 85%;
+    max-width: 1100px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    background-color: rgba(255, 255, 255, 0.35);
+}
+
+/* Versetzte & Zentrale Platzierung */
+.project-card.align-left {
+    align-self: flex-start;
+}
+
+.project-card.align-right {
+    align-self: flex-end;
+}
+
+.project-card.align-center {
+    align-self: center; /* Zentriert Projekt 3 perfekt */
+}
+
+/* Umgekehrte Reihenfolge für Projekt 2 */
+.project-card.reverse {
+    flex-direction: row-reverse;
+
+}
+/* Platzverteilung in der Projektkarte einklinken */
+.project-info {
+    flex: 1 1 50%; /* Nimmt exakt die Hälfte der Karte ein */
+    min-width: 0;  
+    height: auto; /* Verhindert Overflow durch lange Texte/Tags */
+}
+
+
+/* Tech-Tags Styling */
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1.2rem 0;
+}
+
+.tech-tags span {
+    background-color: rgba(0, 0, 0, 0.08);
+    color: #1d1d1f;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+}
+
+/* Buttons für Projektkarten */
+.project-links {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.btn-primary {
+    background-color: #1d1d1f;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: #333336;
+    transform: translateY(-2px);
+}
+
+/* Media Styling (Bilder & Videos) */
+.project-media {
+    flex: 1 1 50%; /* Nimmt exakt die Hälfte der Karte ein */
+    min-width: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-media img,
+.project-media video {
+    width: 100%;
+    max-width: 400px;  /* Begrenzt die maximale Breite des Screenshots */
+    height: auto;
+    max-height: 300px; /* Verhindert übermäßige Höhe */
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+    display: block;
+}
+/* Mobile Optimierung */
+@media (max-width: 900px) {
+    .project-card {
+        width: 100%;
+        flex-direction: column !important;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .project-card.align-left,
+    .project-card.align-right,
+    .project-card.align-center {
+        align-self: center;
+    }
+
+    .tech-tags,
+    .project-links {
+        justify-content: center;
+    }
+}
+/* Footer & Kontaktbereich */
+.footer {
+    margin-top: 5rem;
+    background-color: rgba(0, 0, 0, 0.05); /* Dezent dunklerer Farbton zur Abgrenzung */
+    padding: 4rem 1rem 2rem 1rem;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.footer h2 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.footer p {
+    font-size: 1.05rem;
+    color: #333;
+}
+
+/* Interaktiver E-Mail Button */
+.contact-button {
+    display: inline-block;
+    background-color: #1d1d1f;
+    color: #ffffff;
+    padding: 0.8rem 1.8rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-button:hover {
+    background-color: #333336;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Social Media Links */
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.social-links a {
+    color: #1d1d1f;
+    text-decoration: none;
+    font-weight: 600;
+    transition: opacity 0.2s ease;
+}
+
+.social-links a:hover {
+    opacity: 0.6;
+}
+
+/* Copyright & Rechtliches unten */
+.footer-bottom {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    width: 100%;
+}
+
+.footer-bottom p {
+    font-size: 0.85rem;
+    color: #555;
 }
